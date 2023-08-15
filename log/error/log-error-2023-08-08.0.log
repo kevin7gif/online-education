@@ -1,3 +1,0 @@
-2023-08-08 09:31:42.411 [http-nio-8001-exec-1] ERROR com.kevin.base.exception.GlobalExceptionHandler - Could not get a resource from the pool; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 127.0.0.1:6379
-2023-08-08 09:31:50.940 [http-nio-8001-exec-2] ERROR com.kevin.base.exception.GlobalExceptionHandler - Could not get a resource from the pool; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 127.0.0.1:6379
-2023-08-08 09:31:52.993 [http-nio-8001-exec-4] ERROR com.kevin.base.exception.GlobalExceptionHandler - Could not get a resource from the pool; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 127.0.0.1:6379
