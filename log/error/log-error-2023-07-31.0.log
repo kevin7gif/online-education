@@ -1,5 +1,0 @@
-2023-07-31 16:26:06.878 [http-nio-8001-exec-6] ERROR com.kevin.base.exception.GlobalExceptionHandler - Invalid bound statement (not found): com.kevin.edu.mapper.CourseMapper.getPublishCourseInfo
-2023-07-31 16:33:56.326 [http-nio-8001-exec-6] ERROR com.kevin.base.exception.GlobalExceptionHandler - Invalid bound statement (not found): com.kevin.edu.mapper.CourseMapper.getPublishCourseInfo
-2023-07-31 16:40:21.916 [http-nio-8001-exec-7] ERROR com.kevin.base.exception.GlobalExceptionHandler - Invalid bound statement (not found): com.kevin.edu.mapper.CourseMapper.getPublishCourseInfo
-2023-07-31 16:42:59.847 [http-nio-8001-exec-9] ERROR com.kevin.base.exception.GlobalExceptionHandler - Invalid bound statement (not found): com.kevin.edu.mapper.CourseMapper.getPublishCourseInfo
-2023-07-31 16:45:13.756 [http-nio-8001-exec-7] ERROR com.kevin.base.exception.GlobalExceptionHandler - Invalid bound statement (not found): com.kevin.edu.mapper.CourseMapper.getPublishCourseInfo
