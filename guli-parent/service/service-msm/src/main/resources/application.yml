@@ -1,0 +1,28 @@
+server:
+  port: 8005
+spring:
+  application:
+    name: service-msm
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    database: 2
+    timeout: 180000ms # 连接超时时间（毫秒）
+    lettuce: # 使用lettuce客户端，提供了更多的自定义配置
+      pool:
+        max-active: 20 # 最大连接数
+        max-wait: -1 # 最大阻塞等待时间，-1表示一直等待
+        max-idle: 5 # 最大空闲连接
+        min-idle: 0 # 最小空闲连接
+    password: xhn021019
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

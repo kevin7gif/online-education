@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kevin.statistics.mapper.DailyMapper">
+
+    <!--删除某一天的记录-->
+    <delete id="deleteByDay">
+        delete from statistics_daily where date_calculated = #{day}
+    </delete>
+</mapper>

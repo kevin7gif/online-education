@@ -1,0 +1,27 @@
+# 服务端口号
+server:
+  port: 8002
+# 服务名
+spring:
+  application:
+    name: service-oss
+  # 环境设置
+  profiles:
+    active: dev
+  servlet:
+    multipart:
+      max-request-size: 10MB
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+# 阿里云OSS
+# 不同的服务器地址不同
+aliyun:
+  oss:
+    file:
+      endpoint: oss-cn-beijing.aliyuncs.com
+      keyid: LTAI5tDzWag6iFewhLyVRGQS
+      keysecret: u3NrQmkivdtFzsRftaJHU5qGq6DnNW
+      # bucket可以在控制台创建，也可以通过Java代码创建
+      bucketname: kevin7gif-guli-college
