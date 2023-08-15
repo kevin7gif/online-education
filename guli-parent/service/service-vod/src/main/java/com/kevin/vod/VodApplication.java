@@ -1,5 +1,6 @@
 package com.kevin.vod;
 
+import com.github.xiaoymin.swaggerbootstrapui.annotations.EnableSwaggerBootstrapUI;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
@@ -15,6 +16,7 @@ import org.springframework.context.annotation.ComponentScan;
 // 扫描swagger2配置类
 @ComponentScan(basePackages = {"com.kevin"})
 @EnableDiscoveryClient
+@EnableSwaggerBootstrapUI
 public class VodApplication {
     public static void main(String[] args) {
         SpringApplication.run(VodApplication.class, args);

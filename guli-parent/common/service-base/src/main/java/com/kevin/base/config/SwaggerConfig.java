@@ -1,10 +1,9 @@
 package com.kevin.base.config;
 
-import com.google.common.base.Predicates;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.ApiInfoBuilder;
-import springfox.documentation.builders.PathSelectors;
+import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.service.ApiInfo;
 import springfox.documentation.service.Contact;
 import springfox.documentation.spi.DocumentationType;
@@ -12,30 +11,34 @@ import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
- * @author kevin
- * @version 1.0
- * @date 2023-07-20 20:53
+ * 配置接口文档
  */
 @Configuration
 @EnableSwagger2
 public class SwaggerConfig {
 
+    //创建Docket对象
     @Bean
-    public Docket webApiConfig(){
-        return new Docket(DocumentationType.SWAGGER_2)
-                .groupName("webApi")
-                .apiInfo(webApiInfo())
-                .select()
-                .paths(Predicates.not(PathSelectors.regex("/admin/.*")))
-                .paths(Predicates.not(PathSelectors.regex("/error.*")))
-                .build();
-    }
+    public Docket docket(){
+        //1创建Docket对象
+        Docket docket = new Docket(DocumentationType.SWAGGER_2);
 
-    private ApiInfo webApiInfo(){
-        return new ApiInfoBuilder().title("网站-课程中心API文档")
-                .description("本文档描述了课程中心微服务接口定义")
+        //2创建Api信息， 接口文档的总体描述
+        ApiInfo apiInfo = new ApiInfoBuilder()
+                .title("在线教育平台")
                 .version("1.0")
-                .contact(new Contact("kevin", "kevin7gif.github.io", "2632176642@qq.com"))
+                .description("前后端分离，前端Vue，后端Spring Boot + SpringCloudAlibaba的分布式项目")
+                .contact(new Contact("kevin7gif","kevin7gif.github.io","2632176642@qq.com"))
                 .build();
+
+        //3.设置使用ApiInfo
+        docket = docket.apiInfo(apiInfo);
+
+        //4.设置参与文档生成的包
+        docket = docket.select().apis(RequestHandlerSelectors.
+                basePackage("com.kevin")).build();
+
+        return docket;
+
     }
 }

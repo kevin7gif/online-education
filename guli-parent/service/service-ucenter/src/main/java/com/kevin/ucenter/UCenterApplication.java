@@ -1,5 +1,6 @@
 package com.kevin.ucenter;
 
+import com.github.xiaoymin.swaggerbootstrapui.annotations.EnableSwaggerBootstrapUI;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -16,6 +17,7 @@ import org.springframework.stereotype.Component;
 @ComponentScan(basePackages = {"com.kevin"})// 扫描公共模块
 @EnableDiscoveryClient
 @MapperScan("com.kevin.ucenter.mapper")
+@EnableSwaggerBootstrapUI
 public class UCenterApplication {
     public static void main(String[] args) {
         SpringApplication.run(UCenterApplication.class, args);
