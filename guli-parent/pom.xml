@@ -25,6 +25,8 @@
         <module>service/service-order</module>
         <module>service/service-statistics</module>
         <module>api-gateway</module>
+        <module>service/service-acl</module>
+        <module>common/spring-security</module>
     </modules>
     <packaging>pom</packaging>
 

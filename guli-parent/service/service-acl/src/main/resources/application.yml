@@ -1,0 +1,48 @@
+# 服务端口
+server:
+  port: 8009
+spring:
+  application:
+    # 服务名
+    name: service-acl
+  profiles:
+    # 环境设置
+    active: dev
+  # mysql数据库
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/guli_college?serverTimezone=GMT%2B8&useSSL=false
+    username: root
+    password: xhn021019
+  # 定义统一返回的json时间格式
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  # 配置nacos
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+  # 配置redis
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    database: 2
+    timeout: 180000ms # 连接超时时间（毫秒）
+    lettuce: # 使用lettuce客户端，提供了更多的自定义配置
+      pool:
+        max-active: 20 # 最大连接数
+        max-wait: -1 # 最大阻塞等待时间，-1表示一直等待
+        max-idle: 5 # 最大空闲连接
+        min-idle: 0 # 最小空闲连接
+    password: xhn021019
+
+# mybatis日志
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:**/mapper/xml/*.xml
+
+
+
+
