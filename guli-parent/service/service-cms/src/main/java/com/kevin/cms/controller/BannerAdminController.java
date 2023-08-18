@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.*;
  * @version 1.0
  * @date 2023-08-02 22:13
  */
-@CrossOrigin
 @RestController
 @Api(tags = "网站后台")
 @RequestMapping("/educms/banneradmin")

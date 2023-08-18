@@ -23,7 +23,6 @@ import java.util.List;
  * @date 2023-08-03 8:27
  */
 @RestController
-@CrossOrigin
 @Api(tags = "前台首页")
 @RequestMapping("/eduservice/indexfront")
 public class IndexFrontController {

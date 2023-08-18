@@ -11,6 +11,7 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
 import org.springframework.util.StringUtils;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
@@ -23,7 +24,7 @@ import java.util.List;
 
 /**
  * <p>
- * 访问过滤器
+ * 授权过滤器
  * </p>
  *
  * @author qy

@@ -4,12 +4,13 @@ import io.jsonwebtoken.CompressionCodecs;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import java.util.Date;
 
 /**
  * <p>
- * token管理
+ * token操作工具类
  * </p>
  *
  * @author qy

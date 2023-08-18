@@ -18,7 +18,6 @@ import java.util.List;
  * @date 2023-08-02 22:13
  */
 @RestController
-@CrossOrigin
 @Api(tags = "网站前台")
 @RequestMapping("/educms/bannerfront")
 public class BannerFrontController {

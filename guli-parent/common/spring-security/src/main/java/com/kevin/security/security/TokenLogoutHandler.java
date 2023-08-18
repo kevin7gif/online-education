@@ -6,13 +6,14 @@ import com.kevin.utils.ResponseUtil;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.web.authentication.logout.LogoutHandler;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
  * <p>
- * 登出业务逻辑类
+ * 用户退出业务逻辑类
  * </p>
  *
  * @author qy

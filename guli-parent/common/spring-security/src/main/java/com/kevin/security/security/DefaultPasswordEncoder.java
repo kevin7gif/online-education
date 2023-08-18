@@ -4,6 +4,7 @@ package com.kevin.security.security;
 import com.kevin.utils.MD5;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 /**
  * <p>

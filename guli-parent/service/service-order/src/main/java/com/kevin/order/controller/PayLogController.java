@@ -20,7 +20,6 @@ import java.util.Map;
  */
 @RestController
 @RequestMapping("/eduorder/paylog")
-@CrossOrigin
 @Api(tags = "支付日志管理")
 public class PayLogController {
     @Autowired

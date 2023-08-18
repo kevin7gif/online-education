@@ -13,8 +13,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.net.URLEncoder;
 import java.util.HashMap;
-
-@CrossOrigin
 @Controller  //只是请求地址，不需要返回数据
 @RequestMapping("/api/ucenter/wx")
 public class WxApiController {

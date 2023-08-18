@@ -19,7 +19,6 @@ import java.util.Map;
  */
 @RestController
 @RequestMapping("/admin/acl/index")
-@CrossOrigin
 @Api(description = "首页管理")
 public class IndexController {
 

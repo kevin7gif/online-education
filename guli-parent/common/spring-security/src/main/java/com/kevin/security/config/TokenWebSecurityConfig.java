@@ -17,18 +17,19 @@ import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 /**
  * <p>
- * Security配置类
+ * Security核心配置类
  * </p>
  *
  * @author qy
  * @since 2019-11-18
  */
 @Configuration
-@EnableWebSecurity
-@EnableGlobalMethodSecurity(prePostEnabled = true)
+@EnableWebSecurity// 开启Spring Security
+@EnableGlobalMethodSecurity(prePostEnabled = true)// 开启方法权限控制
 public class TokenWebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     private UserDetailsService userDetailsService;
@@ -36,6 +37,13 @@ public class TokenWebSecurityConfig extends WebSecurityConfigurerAdapter {
     private DefaultPasswordEncoder defaultPasswordEncoder;
     private RedisTemplate redisTemplate;
 
+    /**
+     * 构造方法注入
+     * @param userDetailsService
+     * @param defaultPasswordEncoder
+     * @param tokenManager
+     * @param redisTemplate
+     */
     @Autowired
     public TokenWebSecurityConfig(UserDetailsService userDetailsService, DefaultPasswordEncoder defaultPasswordEncoder,
                                   TokenManager tokenManager, RedisTemplate redisTemplate) {
@@ -46,7 +54,7 @@ public class TokenWebSecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
     /**
-     * 配置设置
+     * 核心配置设置
      * @param http
      * @throws Exception
      */
@@ -80,10 +88,10 @@ public class TokenWebSecurityConfig extends WebSecurityConfigurerAdapter {
      */
     @Override
     public void configure(WebSecurity web) throws Exception {
-//        web.ignoring().antMatchers("/api/**",
-//                "/swagger-resources/**", "/webjars/**", "/v2/**", "/swagger-ui.html/**"
-//               );
-        web.ignoring().antMatchers("/*/**"
-        );
+        web.ignoring().antMatchers("/api/**",
+                "/swagger-resources/**", "/webjars/**", "/v2/**", "/swagger-ui.html/**"
+               );
+        //web.ignoring().antMatchers("/*/**"
+        //);
     }
 }

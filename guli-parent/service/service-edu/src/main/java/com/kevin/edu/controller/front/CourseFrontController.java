@@ -26,7 +26,6 @@ import java.util.Map;
  * @version 1.0
  * @date 2023-08-08 11:49
  */
-@CrossOrigin
 @RestController
 @RequestMapping("/eduservice/coursefront")
 @Api(tags = "前台课程管理")

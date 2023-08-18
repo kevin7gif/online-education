@@ -26,7 +26,6 @@ import javax.servlet.http.HttpServletRequest;
 @RestController
 @RequestMapping("/educenter/member")
 @Api(tags = "会员管理")
-@CrossOrigin
 public class MemberController {
 
     @Autowired

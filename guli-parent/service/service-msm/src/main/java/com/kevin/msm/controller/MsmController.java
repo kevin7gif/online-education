@@ -19,7 +19,6 @@ import java.util.concurrent.TimeUnit;
  */
 @RestController
 @RequestMapping("/edumsm/msm")
-@CrossOrigin
 @Slf4j
 @Api(tags = "短信服务")
 public class MsmController {

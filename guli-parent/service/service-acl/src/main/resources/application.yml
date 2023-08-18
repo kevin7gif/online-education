@@ -5,9 +5,6 @@ spring:
   application:
     # 服务名
     name: service-acl
-  profiles:
-    # 环境设置
-    active: dev
   # mysql数据库
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
