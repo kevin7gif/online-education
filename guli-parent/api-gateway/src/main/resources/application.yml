@@ -42,6 +42,26 @@ spring:
           predicates:
           - Path=/educenter/**
 
+        - id: service-vod
+          uri: lb://service-vod
+          predicates:
+          - Path=/eduvod/**
+
+        - id: service-cms
+          uri: lb://service-cms
+          predicates:
+          - Path=/educms/**
+
+        - id: service-oss
+          uri: lb://service-oss
+          predicates:
+          - Path=/eduoss/**
+
+        - id: service-msm
+          uri: lb://service-msm
+          predicates:
+          - Path=/edumsm/**
+
 
 
 
