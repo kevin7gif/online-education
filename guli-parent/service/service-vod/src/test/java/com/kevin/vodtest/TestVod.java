@@ -18,8 +18,8 @@ import org.junit.Test;
  */
 public class TestVod {
     public static void main(String[] args) {
-        String accessKeyId = "LTAI5tDzWag6iFewhLyVRGQS";
-        String accessKeySecret = "u3NrQmkivdtFzsRftaJHU5qGq6DnNW";
+        String accessKeyId = "yourKeyId";
+        String accessKeySecret = "yourKeySecret";
 
         String title = "test for uploadPlay";   //上传之后文件名称
         String fileName = "E:\\OneDrive\\图片\\大学\\TG-2021-12-11-213933866.mp4";  //本地文件路径和名称
@@ -46,7 +46,7 @@ public class TestVod {
     // 根据视频id获取视频播放凭证
     public static void getPlayAuth(){
         // 创建初始化对象
-        DefaultAcsClient client = InitObject.initVodClient("LTAI5tDzWag6iFewhLyVRGQS", "u3NrQmkivdtFzsRftaJHU5qGq6DnNW");
+        DefaultAcsClient client = InitObject.initVodClient("yourKeyId", "yourKeySecret");
         // 创建获取视频凭证的request和response
         GetVideoPlayAuthRequest request = new GetVideoPlayAuthRequest();
         GetVideoPlayAuthResponse response = new GetVideoPlayAuthResponse();
@@ -64,7 +64,7 @@ public class TestVod {
     // 根据视频id获取视频播放地址
     public static void getPlayUrl() {
         // 创建初始化对象
-        DefaultAcsClient client = InitObject.initVodClient("LTAI5tDzWag6iFewhLyVRGQS", "u3NrQmkivdtFzsRftaJHU5qGq6DnNW");
+        DefaultAcsClient client = InitObject.initVodClient("yourKeyId", "yourKeySecret");
 
         // 创建获取视频地址request和response
         GetPlayInfoResponse response = new GetPlayInfoResponse();
@@ -90,8 +90,8 @@ public class TestVod {
 
     // 上传视频
     public static void uploadPlay(){
-        String accessKeyId = "LTAI5tDzWag6iFewhLyVRGQS";
-        String accessKeySecret = "u3NrQmkivdtFzsRftaJHU5qGq6DnNW";
+        String accessKeyId = "yourKeyId";
+        String accessKeySecret = "yourKeySecret";
 
         String title = "test for uploadPlay";   //上传之后文件名称
         String fileName = "E:\\OneDrive\\图片\\大学\\TG-2021-12-11-213933866.mp4";  //本地文件路径和名称

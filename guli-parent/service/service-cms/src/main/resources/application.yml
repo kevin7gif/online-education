@@ -6,8 +6,8 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/guli_college?useSSL=false&serverTimezone=GMT%2B8
-    username: root
-    password: xhn021019
+    username: yourName
+    password: yourPwd
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: GMT+8
@@ -26,7 +26,7 @@ spring:
         max-wait: -1 # 最大阻塞等待时间，-1表示一直等待
         max-idle: 5 # 最大空闲连接
         min-idle: 0 # 最小空闲连接
-    password: xhn021019
+    password: yourPwd
 
 mybatis-plus:
   mapper-locations: classpath:com/kevin/cms/mapper/xml/*.xml

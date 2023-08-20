@@ -40,8 +40,8 @@ public class CodeGenerator {
         DataSourceConfig dsc = new DataSourceConfig();
         dsc.setUrl("jdbc:mysql://localhost:3306/guli_college?serverTimezone=GMT%2B8&useSSL=false");
         dsc.setDriverName("com.mysql.cj.jdbc.Driver");
-        dsc.setUsername("root");
-        dsc.setPassword("xhn021019");
+        dsc.setUsername("yourName");
+        dsc.setPassword("yourPwd");
         dsc.setDbType(DbType.MYSQL);
         dsc.setSchemaName("guli_college");
         mpg.setDataSource(dsc);
